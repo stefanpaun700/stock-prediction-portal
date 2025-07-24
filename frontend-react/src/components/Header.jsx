@@ -20,7 +20,11 @@ const Header = () => {
             <Link className="navbar-brand text-light" to="/">Stock Prediction Portal</Link>
             <div>
                 {isLoggedIn ? (
-                  <button class='btn-danger text-light' onClick={handleLogout}>Logout</button>
+                  <>
+                  <Button text='Dashboard' class='btn-info' url="/dashboard" />
+                  &nbsp
+                  <button className='btn-danger text-light rounded pb-2' onClick={handleLogout}>Logout</button>
+                  </>
                 ) : (
                   <>
                   <Button text='Login' class='btn-outline-info' url="/login" />
